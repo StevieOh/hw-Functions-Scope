@@ -34,51 +34,64 @@ console.log("JavaScript is working!");
 // // //=> false
 // 
 // 
-// Write a function sumDigits that accepts a number and returns the sum of its digits.
-// const sumDigits = (number) =>{
-//   console.log(number);
-//   const num = number.split(" ");
-//   console.log(num);
+//Write a function sumDigits that accepts a number and returns the sum of its digits.
+const sumDigits = (number) =>{
+  //console.log(number);
+  const digits = number.toString();
+  //console.log(digits); // "13"
+  const iArray = digits.split("").map(Number);
+  console.log(iArray); //[1, 3]
+  //sum the values of the integer array
+    for (let i = 0; i <= iArray.length; i++){
+      console.log(iArray.reduce(currentValue));
 
-// }
+    }
+  
+  //const sumInt = stringArr.reduce();
+ 
+  // // for (let i = 0; i <= stringArr.length; i++){
+  // //   console.log(array.reduce(stringArr[i]));
 
-// sumDigits(13);
+  // }
+}
+
+sumDigits(13);
 // //=> ;
 
 
 
-const checkPrimes = (num) => {
-  //find the square root of the number
-  squareRoot = Math.sqrt(num);
-  // loop through numbers starting at 2
-  for(let i = 2; i <= squareRoot; i++){
-    //console.log(i)
-  // check is num is evenly divisible by each number  
-    if(num % i === 0) {
- // if true return true
-      return true
-    }
-  };
-    // if false, return false
-    return false
-  };
-console.log(checkPrimes(81));
+// const checkPrimes = (num) => {
+//   //find the square root of the number
+//   squareRoot = Math.sqrt(num);
+//   // loop through numbers starting at 2
+//   for(let i = 2; i <= squareRoot; i++){
+//     //console.log(i)
+//   // check is num is evenly divisible by each number  
+//     if(num % i === 0) {
+//  // if true return true
+//       return true
+//     }
+//   };
+//     // if false, return false
+//     return false
+//   };
+// console.log(checkPrimes(81));
 
-const printPrimes = (limit) => {
-  //for loop from 1 to limit
-  for (let i = 1; i <= limit; i++){
-    //if it is prime, print it
-    if (checkPrimes(i) === false){
-      console.log(i)
-    }else{
-      //Do Nothing
-    }
-    //if it isn't prime, ignore it
-  }
+// const printPrimes = (limit) => {
+//   //for loop from 1 to limit
+//   for (let i = 1; i <= limit; i++){
+//     //if it is prime, print it
+//     if (checkPrimes(i) === false){
+//       console.log(i)
+//     }else{
+//       //Do Nothing
+//     }
+//     //if it isn't prime, ignore it
+//   }
 
-}
+// }
 
-printPrimes(97);
+// printPrimes(97);
 
 
 
