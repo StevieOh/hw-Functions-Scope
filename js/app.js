@@ -12,23 +12,119 @@ console.log("JavaScript is working!");
    // 
 
   // Write a function checkPalindrome that accepts a single argument, a string. The function should return true (Boolean) if the string is a palindrome, false if it is not. Make sure your function will give the correct answer for words with capital letters.
-  const checkPalindrome = (pdm) => {
-    // console.log(pdm);
-    const lower = pdm.toLowerCase()
-    console.log(lower);
-    const array = lower.split("");
-    // console.log(array);
-    const rev = array.reverse();
-    const back = (rev.join(""));
-    console.log(back);
-    if (back === lower){
-      console.log(true);
-    }else {
-      console.log( false);
+//   const checkPalindrome = (pdm) => {
+//     // console.log(pdm);
+//     const lower = pdm.toLowerCase()
+//     console.log(lower);
+//     const array = lower.split("");
+//     // console.log(array);
+//     const rev = array.reverse();
+//     const back = (rev.join(""));
+//     console.log(back);
+//     if (back === lower){
+//       console.log(true);
+//     }else {
+//       console.log( false);
 
+//     }
+//   }
+//   checkPalindrome("Radar");
+// //  //=> true
+//   checkPalindrome("Borscht");
+// // //=> false
+// 
+// 
+// Write a function sumDigits that accepts a number and returns the sum of its digits.
+// const sumDigits = (number) =>{
+//   console.log(number);
+//   const num = number.split(" ");
+//   console.log(num);
+
+// }
+
+// sumDigits(13);
+// //=> ;
+
+
+
+const checkPrimes = (num) => {
+  //find the square root of the number
+  squareRoot = Math.sqrt(num);
+  // loop through numbers starting at 2
+  for(let i = 2; i <= squareRoot; i++){
+    //console.log(i)
+  // check is num is evenly divisible by each number  
+    if(num % i === 0) {
+ // if true return true
+      return true
     }
+  };
+    // if false, return false
+    return false
+  };
+console.log(checkPrimes(81));
+
+const printPrimes = (limit) => {
+  //for loop from 1 to limit
+  for (let i = 1; i <= limit; i++){
+    //if it is prime, print it
+    if (checkPrimes(i) === false){
+      console.log(i)
+    }else{
+      //Do Nothing
+    }
+    //if it isn't prime, ignore it
   }
-  checkPalindrome("Radar");
-//  //=> true
-  checkPalindrome("Borscht");
-// //=> false
+
+}
+
+printPrimes(97);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
